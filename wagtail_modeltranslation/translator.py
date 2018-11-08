@@ -9,8 +9,8 @@ class WagtailTranslationOptions(TranslationOptions):
 
     def __init__(self, model):
 
-        from wagtail.wagtailcore.models import Page
-        from wagtail.wagtailforms.models import AbstractEmailForm
+        from wagtail.core.models import Page
+        from wagtail.contrib.forms.models import AbstractEmailForm
 
         if self.any_in([Page, AbstractEmailForm], model.__bases__):
             self.fields += (
